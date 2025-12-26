@@ -1,27 +1,29 @@
 import React from "react";
-import logo from '../assets/logo.svg';
+import logo from "../assets/logo.svg";
 
 const Navbar = () => {
-    const navItems = <>
-    <li>
-              <a>Services</a>
-            </li>
-            <li>
-              <a>Coverage</a>
-            </li>
-            <li>
-              <a>About us</a>
-            </li>
-            <li>
-              <a>Pricing</a>
-            </li>
-            <li>
-              <a>Blog</a>
-            </li>
-            <li>
-              <a>Contact</a>
-            </li>
+  const navItems = (
+    <>
+      <li>
+        <a>Services</a>
+      </li>
+      <li>
+        <a>Coverage</a>
+      </li>
+      <li>
+        <a>About us</a>
+      </li>
+      <li>
+        <a>Pricing</a>
+      </li>
+      <li>
+        <a>Blog</a>
+      </li>
+      <li>
+        <a>Contact</a>
+      </li>
     </>
+  );
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -50,13 +52,13 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <img src={logo} alt=""  className="w-16"/>
+        <div className="flex items-center gap-2">
+          <img src={logo} alt="" className="w-16" />
+          <p className="text-2xl text-green-600"><span className="text-red-700">64</span>Routes</p>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navItems}
-              
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
